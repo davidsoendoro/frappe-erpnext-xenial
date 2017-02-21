@@ -97,7 +97,7 @@ def install_bench(args):
 	extra_vars.update(repo_path=repo_path)
 	run_playbook('develop/create_user.yml', extra_vars=extra_vars)
 
-	extra_vars.update(get_passwords(args.run_travis or args.without_bench_setup), args.mysql_root_password, args.admin_password)
+	extra_vars.update(get_passwords(args.run_travis or args.without_bench_setup, args.mysql_root_password, args.admin_password))
 	if args.production:
 		extra_vars.update(max_worker_connections=multiprocessing.cpu_count() * 1024)
 
