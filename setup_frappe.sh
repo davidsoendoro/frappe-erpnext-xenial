@@ -227,8 +227,12 @@ install_packages() {
 				liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python-tk libmariadbclient-dev
 		fi
 
-		echo "Installing wkhtmltopdf"
-		install_wkhtmltopdf_deb
+        echo "Installing wkhtmltopdf"
+        if [ $OS_VER == "xenial" ]; then
+            run_cmd sudo apt-get install -y --allow-unauthenticated wkhtmltopdf
+        else
+            install_wkhtmltopdf_deb
+		fi
 
 	else
 		echo Unsupported Distribution
