@@ -220,7 +220,7 @@ install_packages() {
 			run_cmd sudo apt-get install -y --allow-unauthenticated libtiff5-dev libjpeg62-turbo-dev zlib1g-dev libfreetype6-dev \
 				liblcms2-dev libwebp-dev tcl8.5-dev tk8.5-dev python-tk npm libmariadbclient-dev
         elif [ $OS_VER == "xenial" ]; then
-			run_cmd sudo apt-get install -y --allow-unauthenticated libtiff4-dev libjpeg8-dev zlib1g-dev libfreetype6-dev \
+			run_cmd sudo apt-get install -y --allow-unauthenticated libtiff5-dev libjpeg62-turbo-dev zlib1g-dev libfreetype6-dev \
 				liblcms2-dev libwebp-dev tcl8.5-dev tk8.5-dev python-tk libmariadb-client-lgpl-dev
 		else
 			run_cmd sudo apt-get install -y --allow-unauthenticated libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev \
